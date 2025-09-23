@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Discover Amazing Recipes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/form.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background decorations -->
+  <div class="bg-decoration">
+    <div class="floating-element floating-element-1">🥘</div>
+    <div class="floating-element floating-element-2">🍅</div>
+    <div class="floating-element floating-element-3">🥬</div>
+    <div class="floating-element floating-element-4">🧄</div>
+    <div class="floating-element floating-element-5">🌿</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <div class="logo-gradient-bg">
+            <span class="logo-icon">🍳</span>
+          </div>
+          <span>Jikoni AI</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#search" id="nav-search" class="nav-link-with-indicator"><span>Discover</span><div class="nav-indicator"></div></a></li>
+            <li><a href="#favorites-section" id="nav-favorites" class="nav-link-with-indicator"><span>My Favorites</span><div class="nav-indicator"></div></a></li>
+            <li><a href="#about" class="nav-link-with-indicator"><span>About</span><div class="nav-indicator"></div></a></li>
+            <li><a href="#about" class="nav-link-with-indicator"><span>Form</span><div class="nav-indicator"></div></a></li>
+          </ul>
+        </nav>
+        <button id="upgradeBtn" class="btn-upgrade">
+          <span class="upgrade-icon"></span>
+          <span>Upgrade to Pro</span>
+          <div class="upgrade-shimmer"></div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="search">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-icon">✨</span><span>AI-Powered Recipe Discovery</span></div>
+        <h1 class="hero-title">Turn Your Ingredients Into <span class="gradient-text">Culinary Magic</span></h1>
+        <p class="hero-subtitle">Tell us what you have in your kitchen, and let AI craft personalized recipes for you.</p>
+        <div class="search-section">
+          <form class="search-form" id="recipe-search-form">
+            <div class="input-group">
+              <div class="input-wrapper">
+                <span class="input-icon">🥕</span>
+                <input type="text" id="ingredients-input" class="ingredients-input" placeholder="Ingredients... (e.g., eggs, flour, cheese)" required>
+                <div class="input-glow"></div>
+              </div>
+            </div>
+            <button type="submit" class="find-recipes-btn" id="find-recipes-btn">
+              <span class="btn-spinner"></span>
+              <span class="btn-text">Find Recipes</span>
+              <div class="btn-glow"></div>
+            </button>
+          </form>
+          <div class="limit-notice"><span class="limit-icon">🔑</span><span>You get <strong>3 free recipe generations</strong>. Upgrade to Pro for unlimited ideas!</span></div>
+          <div class="error-message" id="error-message"><strong>Oops!</strong> Something went wrong. Please try again.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back Button -->
+    <button class="back-button" id="back-button">
+      <span class="back-arrow">←</span>
+      <span>Back to Search</span>
+      <div class="back-button-ripple"></div>
+    </button>
+
+  
+
+  <section class="recipe-form-section" style="font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; border-radius: 12px; background: linear-gradient(135deg, #ffe5d9, #ffcad4); box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+  <h2 style="text-align: center; color: #ff6f61; font-size: 2em; margin-bottom: 10px; animation: fadeIn 1s ease-in;">Get Your Recipe List </h2>
+  <p style="text-align: center; color: #6b5b95; margin-bottom: 20px;">Click the button below to fill the form and receive your recipes!</p>
+
+  <!-- Button to show form -->
+  <button id="showFormBtn" style="display: block; margin: 0 auto 20px auto; padding: 12px 25px; background-color: #ff6f61; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: all 0.3s ease;">
+    Show Form
+  </button>
+
+  <!-- Hidden form -->
+  <form id="recipeForm" style="display: none; animation: slideIn 0.5s forwards;">
+    <label for="name" style="display:block; margin-bottom: 5px; color: #355c7d;">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; transition: border 0.3s, box-shadow 0.3s;"
+      onfocus="this.style.borderColor='#ff6f61'; this.style.boxShadow='0 0 8px rgba(255,111,97,0.5)';"
+      onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';">
+
+    <label for="email" style="display:block; margin-bottom: 5px; color: #355c7d;">Email:</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; transition: border 0.3s, box-shadow 0.3s;"
+      onfocus="this.style.borderColor='#ff6f61'; this.style.boxShadow='0 0 8px rgba(255,111,97,0.5)';"
+      onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';">
+
+    <label for="ingredients" style="display:block; margin-bottom: 5px; color: #355c7d;">Ingredients You Have (optional):</label>
+    <textarea id="ingredients" name="ingredients" placeholder="List the ingredients you have..." rows="4"
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; transition: border 0.3s, box-shadow 0.3s;"
+      onfocus="this.style.borderColor='#ff6f61'; this.style.boxShadow='0 0 8px rgba(255,111,97,0.5)';"
+      onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';"></textarea>
+
+    <button type="submit"
+      style="width: 100%; padding: 12px; background-color: #355c7d; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1em; transition: all 0.3s ease;">
+      Send Me Recipes!
+    </button>
+  </form>
+
+  <!-- Feedback message -->
+  <p id="feedback" style="display:none; color: green; margin-top: 15px; text-align:center; font-weight: bold;"></p>
+</section>
+
+<script>
+  const showFormBtn = document.getElementById('showFormBtn');
+  const recipeForm = document.getElementById('recipeForm');
+  const feedback = document.getElementById('feedback');
+
+  showFormBtn.addEventListener('click', () => {
+    recipeForm.style.display = recipeForm.style.display === 'none' ? 'block' : 'none';
+    showFormBtn.textContent = recipeForm.style.display === 'block' ? 'Hide Form' : 'Show Form';
+  });
+
+  recipeForm.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    // Feedback before redirect
+    feedback.textContent = `Thanks, ${name}! Redirecting you to delicious recipes... 🍲`;
+    feedback.style.display = "block";
+
+    // Redirect after 3 seconds
+    setTimeout(() => {
+      window.location.href = "https://www.allrecipes.com/";
+    }, 3000);
+  });
+</script>
+
+<style>
+  @keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Hover effects for buttons */
+  #showFormBtn:hover {
+    background-color: #ff8f7f;
+    transform: scale(1.05);
+  }
+
+  form button:hover {
+    background-color: #6c5b7b;
+    transform: scale(1.03);
+  }
+</style>
+
+
+
+    <!-- Results Section (only one kept) -->
+    <section class="results-section" id="results-section">
+      <div class="results-header">
+        <div class="results-header-content">
+          <h2 class="results-title">Recipe Suggestions</h2>
+          <p class="results-subtitle">Here are some delicious recipes you can make!</p>
+        </div>
+      </div>
+      <div class="recipes-grid" id="recipes-grid"></div>
+    </section>
+
+    <!-- Favorites Section (only one kept) -->
+    <section class="favorites-section" id="favorites-section">
+      <div class="favorites-header">
+        <div class="favorites-header-content">
+          <h2 class="favorites-title"><span class="favorites-icon"></span> My Favorite Recipes</h2>
+          <p class="results-subtitle">Your saved culinary treasures</p>
+        </div>
+      </div>
+      <div class="recipes-grid" id="favorites-grid">
+        <div class="empty-favorites" id="empty-favorites">
+          <div class="empty-favorites-animation">
+            <div class="empty-favorites-icon"></div>
+            <div class="empty-favorites-sparkles">
+              <span class="sparkle sparkle-1"></span>
+              <span class="sparkle sparkle-2"></span>
+              <span class="sparkle sparkle-3"></span>
+            </div>
+          </div>
+          <h3>No favorites yet!</h3>
+          <p>Start discovering recipes and save your favorites here.</p>
+          <button class="discover-button" onclick="document.getElementById('nav-search').click()"><span>Discover Recipes</span> →</button>
+        </div>
+      </div>
+    </section>
+    <section style="text-align:center; margin:30px; font-family:Arial, sans-serif;">
+  <h2>Explore Recipe Gallery 🍽️</h2>
+  <p>Click the button below to open a variety of delicious recipes!</p>
+
+  <!-- Button to open gallery in new tab -->
+  <button 
+    onclick="window.open('https://www.allrecipes.com/recipes/17567/ingredients/', '_blank')" 
+    style="padding:12px 24px; font-size:16px; border:none; border-radius:8px; background:#ff7f50; color:white; cursor:pointer; transition:0.3s;">
+    Open Recipe Gallery
+  </button>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-main">
+          <a href="#" class="footer-logo"><span class="footer-logo-icon"></span> <span></span></a>
+          <p class="footer-tagline">Transforming your kitchen ingredients into culinary masterpieces with AI.</p>
+        </div>
+        <p class="footer-bottom">@Somwaki.com Made with and food lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cursor Trail -->
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const trail = document.getElementById('cursor-trail');
+      trail.style.left = (e.clientX - 10) + 'px';
+      trail.style.top = (e.clientY - 10) + 'px';
+      trail.style.opacity = '0.6';
+      setTimeout(() => { trail.style.opacity = '0'; }, 100);
+    });
+  </script>
+</body>
+</html>
