@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Jikoni AI</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #fff7f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6f61, #ff9a8b);
+      padding: 15px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      background-color: rgba(255,255,255,0.2);
+      transform: scale(1.1);
+    }
+
+    main.container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff3f0;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ff6f61;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+
+    .highlight {
+      color: #ff7f50;
+      font-weight: bold;
+    }
+
+    .team-section {
+      margin-top: 40px;
+    }
+
+    .team-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff6f61;
+    }
+
+    .team-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .team-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .team-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .team-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>About Jikoni AI 🍳</h1>
+    <p>Welcome to <span class="highlight">Jikoni AI</span>, your AI-powered recipe discovery platform! Our tool allows you to enter the ingredients you have at home, and we generate <strong>unique, delicious recipes</strong> for you instantly.</p>
+    <p>Whether you are a beginner or an experienced cook, our mission is to make cooking <span class="highlight">fun, creative, and easy</span>. Say goodbye to boring meals and hello to culinary magic!</p>
+
+    <div class="team-section">
+      <h2>Meet Our Team 👩‍🍳👨‍🍳</h2>
+      <div class="team-cards">
+        <div class="team-card">
+          <img src="/images/gd..PNG" alt="Team Member">
+          <h3>Gideon Omwange</h3>
+          <p>Developer</p>
+        </div>
+        <div class="team-card">
+          <img src="/images/s.PNG" alt="Team Member">
+          <h3>Steven</h3>
+          <p>Recipe Curator</p>
+        </div>
+        <div class="team-card">
+          <img src="/images/d.PNG" alt="Team Member">
+          <h3>Dorcah</h3>
+          <p>Recipe Curator</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:30px; text-align:center;">
+      <p>Join our community and explore a world of culinary possibilities! 🍲</p>
+      <button onclick="window.location.href='index.html'" 
+        style="padding:12px 25px; font-size:16px; border:none; border-radius:8px; background:#ff7f50; color:white; cursor:pointer; transition:0.3s;">
+        Back to Home
+      </button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jikoni AI. All rights reserved.</p>
+  </footer>
+</body>
+</html>

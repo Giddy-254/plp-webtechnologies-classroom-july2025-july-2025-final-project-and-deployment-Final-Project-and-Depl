@@ -14,7 +14,7 @@ const supabase = (window.supabase && window.supabase.createClient)
 
 
 // Free-tier usage tracking (lifetime, not daily)
-const FREE_RECIPE_LIMIT = 3; // only 3 searches total before upgrade
+const FREE_RECIPE_LIMIT = 20; // only 3 searches total before upgrade
 
 function getUserRecipeCount() {
     return parseInt(localStorage.getItem("savorai_recipe_count") || "0", 10);

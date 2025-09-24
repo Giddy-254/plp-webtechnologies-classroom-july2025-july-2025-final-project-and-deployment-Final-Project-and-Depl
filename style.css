@@ -208,7 +208,7 @@ body {
 }
 
 /* Enhanced Upgrade Button */
-.btn-upgrade {
+/* .btn-upgrade {
     background: var(--gradient-primary);
     color: white;
     border: none;
@@ -248,7 +248,7 @@ body {
 
 .upgrade-icon {
     font-size: 1.1rem;
-}
+} */
 
 /* Enhanced Limit Notice */
 .limit-notice {
